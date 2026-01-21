@@ -8,7 +8,6 @@ import { Values } from "./components/Values"
 import './index.css'
 import './App.css'
 
-
 function App() {
 
   return (
