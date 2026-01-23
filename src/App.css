@@ -7,9 +7,11 @@
 }
 
 .div-img {
-  display:grid;
-  grid-template-columns: 1;
-  grid-gap: 2rem;
+  display: grid;
+  /* CORRECCIÓN: Usar 1fr para que ocupe todo el ancho disponible */
+  grid-template-columns: repeat(1, minmax(0, 1fr)); 
+  gap: 2rem; /* 'grid-gap' es antiguo, 'gap' es el estándar actual */
+  width: 100%;
 }
 
 /* Mostrarlo a partir del tamaño medio (ej. 768px) */
