@@ -5,6 +5,7 @@ import { History } from "./components/History"
 import { Navigation } from "./components/Navigation"
 import { Services } from "./components/Services"
 import { Values } from "./components/Values"
+import { Gallery } from "./components/Gallery"
 import './index.css'
 import './App.css'
 
@@ -18,6 +19,7 @@ function App() {
         <History />
         <Services />
         <Clients />
+         <Gallery/>
         <Values />
         <Footer />
       </div>
