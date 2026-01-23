@@ -79,7 +79,7 @@ export function Gallery() {
               className="group relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 aspect-[4/3]"
             >
               {/* Image */}
-               <ImageWithFallback
+               <img
                 src={image.url}
                 alt={image.title}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
