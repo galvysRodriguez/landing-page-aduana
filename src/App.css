@@ -8,8 +8,8 @@
 
 .div-img {
   display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 3rem;
+  grid-template-columns: 1;
+  grid-gap: 2rem;
 }
 
 /* Mostrarlo a partir del tamaño medio (ej. 768px) */
@@ -19,7 +19,7 @@
   }
 
   .div-img {
-    grid-template-columns: 1;
+    grid-template-columns: repeat(2, 1fr);
     grid-gap:2rem;
   }
 }
