@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { MessageCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-import Images1 from '../assets/slider/5141091577647270828.jpg'
+import Images1 from '../assets/slider/5141091577647270830.jpg'
 import Images2 from '../assets/slider/5141091577647270832.jpg'
 import Images3 from '../assets/slider/5150342323022531459.jpg'
 import Images4 from '../assets/slider/5150342323022531461.jpg'
@@ -13,8 +13,8 @@ export function Hero() {
   const slides = [
     {
       url: Images1,
-      title: "Logística Marítima Global",
-      highlight: "y Aduanas desde 1981",
+      title: "Especialista de Logística integrada en",
+      highlight: "Aduana y Transportes desde 1981",
       desc: "Más de 40 años conectando a Venezuela con los puertos más importantes del mundo."
     },
     {

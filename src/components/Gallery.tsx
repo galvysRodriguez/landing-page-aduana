@@ -1,4 +1,4 @@
-import portuarias from '../assets/slider2/5141091577647270830.jpg'
+import portuarias from '../assets/slider2/5141091577647270828.jpg'
 import almacenamiento from '../assets/slider2/5141091577647270831.jpg';
 import aduanal from '../assets/slider2/5141091577647270834.jpg';
 import transporte from '../assets/slider2/5141091577647270835.jpg';
@@ -7,26 +7,25 @@ import { useState } from 'react'
 const galleryImages = [
   {
     url: portuarias,
-    title: 'Operaciones Portuarias',
-    description: 'Gestión integral de contenedores y carga marítima'
+    title: 'Logística de Carga Pesada',
+    description: 'Transporte terrestre eficiente con flota de gran capacidad para carga paletizada.'
   },
   {
     url: almacenamiento,
-    title: 'Almacenamiento Seguro',
-    description: 'Instalaciones modernas para custodia de mercancías'
+    title: 'Transporte y Manipulación de Químicos',
+    description: 'Manejo especializado de contenedores IBC con estrictos protocolos de seguridad y control de derrames.'
   },
   {
     url: aduanal,
-    title: 'Gestión Aduanal',
-    description: 'Tramitación completa de documentos y permisos'
+    title: 'Transporte de Material Petrolero',
+    description: 'Servicios logísticos especializados para la industria energética y transporte de carga sobredimensionada.'
   },
   {
     url: transporte,
-    title: 'Transporte Terrestre',
-    description: 'Flota moderna para distribución nacional'
+    title: 'Operaciones en Plantas Industriales',
+    description: 'Distribución técnica y suministro directo en instalaciones industriales y campos petroleros.'
   }
 ];
-
 
 
 

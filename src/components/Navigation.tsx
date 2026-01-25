@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MessageCircle, Menu, X } from 'lucide-react';
 import logo from '../assets/logo.png';
+import { LanguageSelector } from './LanguageSelector';
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,6 +73,9 @@ export function Navigation() {
                 <MessageCircle className="w-4 h-4" />
                 WhatsApp
               </a>
+              <div className="border-l border-gray-200 pl-4">
+    <LanguageSelector />
+  </div>
             </div>
           </div>
 
@@ -114,8 +118,13 @@ export function Navigation() {
               Contactar por WhatsApp
             </a>
           </div>
+          
         </div>
+        <div className="border-l border-gray-200 pl-4">
+    <LanguageSelector />
+  </div>
       </div>
+
     </nav>
   );
 }

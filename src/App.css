@@ -2,6 +2,38 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Ocultar la barra superior de Google Translate */
+/* Ocultar elementos visuales de Google Translate */
+/* 1. Ocultar el icono circular flotante (el de tu imagen) */
+.skiptranslate > iframe,
+.goog-te-gadget-icon,
+.goog-te-spinner-pos,
+.goog-te-spinner {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* 2. Ocultar la barra superior que a veces empuja el contenido */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* 3. Asegurar que el body no se desplace */
+body {
+    top: 0 !important;
+}
+
+/* 4. Ocultar cualquier widget original de Google que se filtre */
+#google_translate_element {
+    display: none !important;
+}
+
+/* 5. Eliminar el resaltado de texto traducido (tooltips) */
+.goog-text-highlight {
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
 .mi-div-oculto {
   display: none;
 }
