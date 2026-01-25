@@ -8,8 +8,7 @@
   <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://translate.google.com https://translate.googleapis.com;">
   <title>Customs Broker de Venezuela</title>
 <script type="text/javascript">
-  // Esta función la llamaremos DESDE React para asegurar que el div exista
-  window.initGoogleTranslate = function() {
+  function googleTranslateElementInit() {
     new google.translate.TranslateElement({
       pageLanguage: 'es',
       includedLanguages: 'en,es',
@@ -18,25 +17,32 @@
   }
 
   window.triggerGoogleTranslate = function(langCode) {
+    // 1. Intentamos cambiar el selector si existe
     var select = document.querySelector('select.goog-te-combo');
+    
+    // 2. Forzamos la cookie (La clave para Producción)
+    // El formato debe ser: /idioma_origen/idioma_destino
+    const cookieValue = `/es/${langCode}`;
+    const domain = window.location.hostname;
+    
+    // Escribimos la cookie en todas las variantes posibles para asegurar que el host la tome
+    document.cookie = `googtrans=${cookieValue}; path=/;`;
+    document.cookie = `googtrans=${cookieValue}; domain=.${domain}; path=/;`;
+    document.cookie = `googtrans=${cookieValue}; domain=${domain}; path=/;`;
+
     if (select) {
       select.value = langCode;
       select.dispatchEvent(new Event('change', { bubbles: true }));
-    }
-
-    const domain = window.location.hostname;
-    document.cookie = `googtrans=/es/${langCode}; domain=${domain}; path=/`;
-    document.cookie = `googtrans=/es/${langCode}; path=/`;
-    
-    // Recargar sutilmente si Google no reacciona automáticamente
-    if (!select) {
-        window.location.reload();
+    } else {
+      // Si el script de Google se "durmió", recargamos la página.
+      // Al recargar, Google leerá la cookie que acabamos de escribir y traducirá al instante.
+      window.location.reload();
     }
   }
 </script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js"></script>
-  <script type="module" crossorigin src="/landing-page-aduana/assets/index-DYR_mTP-.js"></script>
-  <link rel="stylesheet" crossorigin href="/landing-page-aduana/assets/index-DjvRwfnL.css">
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <script type="module" crossorigin src="/landing-page-aduana/assets/index-CFzjbCkj.js"></script>
+  <link rel="stylesheet" crossorigin href="/landing-page-aduana/assets/index-7gBXRdv-.css">
 </head>
 
 <body>
