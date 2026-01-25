@@ -1,14 +1,36 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/landing-page-aduana/assets/logo-BY83WRix.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>aduana</title>
-    <script type="module" crossorigin src="/landing-page-aduana/assets/index-N9e97H9t.js"></script>
-    <link rel="stylesheet" crossorigin href="/landing-page-aduana/assets/index-BSh0IhS6.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/landing-page-aduana/assets/logo-BY83WRix.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Customs Broker de Venezuela</title>
+<script type="text/javascript">
+  // Esta función la llamaremos DESDE React para asegurar que el div exista
+  window.initGoogleTranslate = function() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'es',
+      includedLanguages: 'en,es',
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+
+  window.triggerGoogleTranslate = function(langCode) {
+    var select = document.querySelector('select.goog-te-combo');
+    if (select) {
+      select.value = langCode;
+      select.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js"></script>
+  <script type="module" crossorigin src="/landing-page-aduana/assets/index-DYR_mTP-.js"></script>
+  <link rel="stylesheet" crossorigin href="/landing-page-aduana/assets/index-DjvRwfnL.css">
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
