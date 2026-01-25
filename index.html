@@ -22,6 +22,15 @@
       select.value = langCode;
       select.dispatchEvent(new Event('change', { bubbles: true }));
     }
+
+    const domain = window.location.hostname;
+    document.cookie = `googtrans=/es/${langCode}; domain=${domain}; path=/`;
+    document.cookie = `googtrans=/es/${langCode}; path=/`;
+    
+    // Recargar sutilmente si Google no reacciona automáticamente
+    
+        window.location.reload();
+    
   }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js"></script>
